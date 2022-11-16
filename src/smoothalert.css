@@ -1,0 +1,333 @@
+:root {
+    --vue-smoothalert-simple-bg: #EB1D36;
+    --vue-smoothalert-simple-tint: #ffd1d6;
+    --vue-smoothalert-error: #ffe5de;
+    --vue-smoothalert-error-border: #EB6440;
+    --vue-smoothalert-success: #EB6440;
+}
+
+
+button {
+    appearance: none;
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    color: inherit;
+}
+
+.smoothalert__area {
+    position: fixed;
+    /* top: 22px;
+    right: 22px; */
+    display: flex;
+    flex-direction: column-reverse;
+    row-gap: 5px;
+    transition: all .3s;
+}
+
+.smoothalert__area.smoothalert__bottom {
+    flex-direction: column;
+}
+
+.smoothalert__smoothalert-simple {
+    display: block;
+    background-color: var(--vue-smoothalert-simple-tint);
+    border: 1px solid var(--vue-smoothalert-simple-bg);
+    color: var(--vue-smoothalert-simple-bg);
+    padding: 9px 35px;
+    border-radius: 14px;
+    transition: transform .5s cubic-bezier(0.230, 1.000, 0.320, 1.000);
+}
+
+
+.smoothalert__smoothalert-padding {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.smoothalert__smoothalert-simple .vue-smoothalert__close-button {
+    position: absolute;
+    right: -10px;
+    top: -10px;
+    width: 26px;
+    height: 26px;
+    display: flex;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+    border-radius: 120px;
+    border: 1px solid #eee;
+}
+
+.smoothalert__smoothalert-simple .vue-smoothalert__close-button-icon {
+    color: var(--vue-smoothalert-simple-bg);
+}
+
+.smoothalert__smoothalert-blurry {
+    display: flex;
+    min-width: 150px;
+    justify-content: space-between;
+    align-items: center;
+    white-space: nowrap;
+    background-color: #ffffffcb;
+    /* padding: ; */
+    border-radius: 4px;
+    backdrop-filter: blur(5px);
+    transition: transform .5s cubic-bezier(0.230, 1.000, 0.320, 1.000);
+    padding: 0px 10px;
+    font-size: 14px;
+    color: #2d2d2d;
+    user-select: none;
+}
+
+.smoothalert__smoothalert-blurry-close {
+    font-size: 13px;
+    padding: 12px 5px;
+    color: #2d2d2d;
+}
+
+.smoothalert__smoothalert-blurry-close::rtl {
+    border-right: 1px solid #2d2d2d;
+}
+
+.smoothalert__smoothalert-blurry-close::ltr {
+    border-left: 1px solid #2d2d2d;
+}
+
+
+.vue-smoothalert__w-6 {
+    width: 1.5rem
+}
+
+.smoothalert-mushy {
+    display: flex;
+    min-width: 250px;
+    -webkit-user-select: none;
+    user-select: none;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 0.5rem;
+    background-color: rgb(255 255 255 / 0.9);
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    --tw-text-opacity: 1;
+    color: rgb(0 0 0 / var(--tw-text-opacity));
+    --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+    --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+    --tw-shadow-color: rgb(0 0 0 / 0.05);
+    --tw-shadow: var(--tw-shadow-colored);
+    --tw-backdrop-blur: blur(4px);
+    backdrop-filter: var(--tw-backdrop-blur)
+}
+
+.smoothalert-mushy.error {
+    border-width: 1px;
+    --tw-border-opacity: 1;
+    border-color: rgb(239 68 68 / var(--tw-border-opacity));
+    --tw-bg-opacity: 1;
+    background-color: rgb(254 242 242 / var(--tw-bg-opacity));
+    --tw-text-opacity: 1;
+    color: rgb(239 68 68 / var(--tw-text-opacity))
+}
+
+
+.smoothalert__testName {
+    padding: 3px 10px;
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+    border-radius: 15px;
+    /* min-width: 150px; */
+    /* justify-content: space-between; */
+    /* direction: rtl; */
+    /* color: red; */
+}
+
+
+
+.smoothalert__testName[dir="rtl"] {
+    padding-left: 25px;
+}
+
+.smoothalert__testName .smoothalert__testName-text {
+    padding-left: 30px;
+}
+
+
+
+.smoothalert__testName
+.smoothalert__testName-badge 
+{
+    width: 20px;
+    height: 20px;
+    padding: 8px;
+    border-radius: 15px;
+    box-shadow: 3px 3px 10px #00000020;
+}
+.smoothalert__testName
+.smoothalert__testName-badge 
+svg {
+    padding: 1px;
+    color: white;
+}
+
+
+.smoothalert__testName[data-type="error"] {
+    color: var(--vue-smoothalert-error-border);
+    border: var(--vue-smoothalert-error-border) solid 1px;
+    background-color: var(--vue-smoothalert-error);
+}
+
+
+.smoothalert__testName[data-type="error"]
+.smoothalert__testName-badge {
+    background-color: var(--vue-smoothalert-error-border);
+}
+
+
+
+.smoothalert__testName[data-type="success"] {
+    color: black;
+    border: #5FD068 solid 1px;
+    background-color: #cfffd3;
+}
+
+.smoothalert__testName[data-type="success"]
+.smoothalert__testName-badge {
+    background-color: #5FD068;
+}
+
+.smoothalert__testName[data-type="warning"] {
+    color: black;
+    border: #EFD345 solid 1px;
+    background-color: #fff7cf;
+}
+
+.smoothalert__testName[data-type="warning"]
+.smoothalert__testName-badge {
+    background-color: #EFD345;
+}
+
+
+
+
+/* .smoothalert__top .smoothalert-mushy {
+    l
+} */
+
+/* Position with animation's */
+
+.smoothalert__right-top {
+    right: 22px;
+    top: 22px;
+}
+
+.smoothalert__bottom {
+    transform: translateX(-50%);
+    left: 50%;
+    bottom: 22px;
+}
+
+.smoothalert__top {
+    transform: translateX(-50%);
+    left: 50%;
+    top: 22px;
+}
+
+.smoothalert__top {
+    flex-direction: column-reverse;
+}
+
+.smoothalert__smoothalert {
+    transition: all .3s;
+}
+
+.smoothalert__top .smoothalert__smoothalert {
+    animation: slide-in-blurred-top 0.6s cubic-bezier(0.230, 1.000, 0.320, 1.000) normal;
+}
+
+.smoothalert__bottom .smoothalert__smoothalert {
+    animation: slide-in-blurred-bottom 0.6s cubic-bezier(0.230, 1.000, 0.320, 1.000) normal;
+}
+
+
+.smoothalert__right-top .smoothalert__smoothalert {
+    animation: slide-in-blurred-right 0.6s cubic-bezier(0.230, 1.000, 0.320, 1.000) normal;
+}
+
+.smoothalert__left-top .smoothalert__smoothalert {
+    animation: slide-in-blurred-left 0.6s cubic-bezier(0.230, 1.000, 0.320, 1.000) normal;
+}
+
+
+
+.vue-smoothalert__pop-bye {
+    opacity: 0;
+    transform: rotateY(20deg);
+    filter: blur(30px);
+    transition: all 1s;
+}
+
+
+/* keyframes */
+@keyframes slide-in-blurred-left {
+    0% {
+        transform: translateX(-200px);
+        filter: blur(15px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        filter: blur(0);
+        opacity: 1;
+    }
+}
+
+
+@keyframes slide-in-blurred-bottom {
+    0% {
+        transform: translateY(100px);
+        filter: blur(15px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        filter: blur(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slide-in-blurred-top {
+    0% {
+        transform: translateY(-100px);
+        filter: blur(15px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        filter: blur(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slide-in-blurred-right {
+    0% {
+        transform: translateX(200px);
+        filter: blur(15px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        filter: blur(0);
+        opacity: 1;
+    }
+}
