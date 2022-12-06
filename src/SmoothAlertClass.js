@@ -127,6 +127,16 @@ class SmoothAlert {
         }
     }
 
+    dark() {
+        this.html.classList.add('smoothalert__smoothalert-dark')
+        return this
+    }
+
+    bottom() {
+        this.props.position = 'bottom'
+        return this
+    }
+
     destructor() {
         this.area.appendChild(this.html);
     }
